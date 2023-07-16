@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "category_name": "Fruit & Vegetables",
+    "category_description": "Explore the natural goodness of fresh produce in our fruit and vegetables category. Bursting with vibrant colors and flavors, our selection includes a diverse range of seasonal fruits and vegetables, carefully sourced to ensure maximum freshness and quality. Whether you're planning to whip up a delicious salad, create a nutritious smoothie, or simply enjoy nature's bounty on its own, our fruit and vegetable section is your gateway to a healthy and well-balanced diet.",
+    "category_image": "assets/jpeg/category01.jpg"
+  },
+  {
+    "id": 2,
+    "category_name": "Bakery",
+    "category_description": "Indulge in the delectable world of freshly baked goods with our bakery category. From crusty artisan bread to mouthwatering pastries, our online bakery offers a delightful array of treats to satisfy your cravings. Whether you're looking for a perfect loaf for sandwiches or a sweet pastry for breakfast, our bakery section is sure to bring a touch of warmth and deliciousness to your table.",
+    "category_image": "assets/jpeg/category02.jpg"
+  },
+  {
+    "id": 3,
+    "category_name": "Meat & Poultry",
+    "category_description": "Discover the finest selection of high-quality meats in our online store. Our meat category features a diverse range of options, including tender cuts of beef, succulent poultry, flavorful pork, and more. Carefully sourced from trusted suppliers, our meats are handled with utmost care to ensure freshness and flavor. Explore our meat section and elevate your culinary creations with premium ingredients that guarantee a delightful dining experience.",
+    "category_image": "assets/jpeg/category03.jpg"
+  },
+  {
+    "id": 4,
+    "category_name": "Organic Food",
+    "category_description": "Embrace a healthier lifestyle with our organic food category. We are committed to providing you with a wide range of organic products that are grown and produced without the use of artificial pesticides, chemicals, or genetically modified organisms (GMOs). From fresh fruits and vegetables to pantry staples and snacks, our organic food section allows you to make conscious choices for yourself and the environment, ensuring that every bite is nourishing and sustainable.",
+    "category_image": "assets/jpeg/category04.jpg"
+  },
+  {
+    "id": 5,
+    "category_name": "Food Cupboard",
+    "category_description": "Convenience meets taste in our canned food category. Stock up your pantry with our assortment of canned foods, offering both convenience and versatility. From canned vegetables and fruits to soups, sauces, and more, our selection is carefully curated to provide you with nutritious and delicious options that are ready to use. Enjoy the convenience of having pantry staples on hand and create quick, flavorful meals with our canned food selection.",
+    "category_image": "assets/jpeg/category05.jpg"
+  },
+  {
+    "id": 6,
+    "category_name": "Vegan",
+    "category_description": "Embrace the power of plant-based eating with our vegan food category. We understand the importance of catering to diverse dietary preferences, and our vegan section offers a wide range of products that are free from animal-derived ingredients. Discover a variety of vegan alternatives, including plant-based proteins, dairy-free substitutes, vegan snacks, and more. With our vegan food selection, you can explore a compassionate and sustainable way of nourishing your body.",
+    "category_image": "assets/jpeg/category06.jpg"
+  },
+  {
+    "id": 7,
+    "category_name": "Wine & Spirits",
+    "category_description": "Raise a glass to the finer things in life with our wine and spirits category. Whether you're looking for a robust red, a crisp white, or a celebratory bottle of champagne, our online store offers a carefully curated selection to suit every occasion and palate. Explore our collection of spirits, including whiskey, vodka, rum, and more, for those who appreciate a good cocktail or enjoy savoring a fine spirit on its own. Elevate your evenings and special moments with our exquisite wine and spirits selection.",
+    "category_image": "assets/jpeg/category07.jpg"
+  },
+  {
+    "id": 8,
+    "category_name": "Household",
+    "category_description": "From cleaning supplies to everyday essentials, our household category has everything you need to keep your home running smoothly. Browse through a wide range of products, including laundry detergents, personal care items, kitchen supplies, and more. We prioritize quality and reliability, offering trusted brands that make your household chores easier and ensure a well-stocked home. With our household category, you can conveniently shop for all your day-to-day needs in one place.",
+    "category_image": "assets/jpeg/category08.jpg"
+  },
+  {
+    "id": 9,
+    "category_name": "Pet Food",
+    "category_description": "Give your furry friends the love they deserve with our premium pet food category. We understand that pets are cherished members of the family, and that's why we offer a wide selection of nutritious and flavorful pet food options. From specially formulated kibble to mouthwatering treats, our pet food section caters to the dietary needs and preferences of dogs and cats alike. Provide your pets with the nourishment they need to thrive and keep their tails wagging with happiness.",
+    "category_image": "assets/jpeg/category09.jpg"
+  },
+  {
+    "id": 10,
+    "category_name": "On Sale",
+    "category_description": "Don't miss out on incredible savings with our exclusive sale featuring fantastic discounts! Our sale category is a treasure trove of deals and offers, allowing you to stock up on your favorite products at unbeatable prices. From pantry staples to gourmet delights, household essentials to luxury treats, this is the perfect opportunity to score amazing bargains and make the most of your shopping experience. Hurry and grab these limited-time offers before they're gone! Happy shopping and saving!",
+    "category_image": "assets/jpeg/category10.jpg"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "comment_name": "John",
+    "image_path": "assets/jpeg/avatar01.jpg",
+    "comment_title": "Delicious Salad!",
+    "comment_text": "I tried the Quick and Easy Pasta Salad recipe, and it was absolutely delicious! The combination of fresh vegetables and tangy dressing was perfect."
+  },
+  {
+    "id": 2,
+    "comment_name": "Sarah",
+    "image_path": "assets/jpeg/avatar02.jpg",
+    "comment_title": "Great Avocado Toast",
+    "comment_text": "The Healthy Avocado Toast recipe was a hit! The creamy avocado paired with the toppings on whole-grain bread made for a healthy and satisfying breakfast."
+  },
+  {
+    "id": 3,
+    "comment_name": "Michael",
+    "image_path": "assets/jpeg/avatar03.jpg",
+    "comment_title": "Spicy Taco Love",
+    "comment_text": "I'm a fan of spicy food, and the Spicy Black Bean Tacos did not disappoint! The combination of black beans, fresh salsa, and creamy avocado made for a flavorful meal."
+  },
+  {
+    "id": 4,
+    "image_path": "assets/jpeg/avatar04.jpg",
+    "comment_name": "Emily",
+    "comment_title": "Delicious Quinoa Bowl",
+    "comment_text": "The Roasted Vegetable Quinoa Bowl was a nutritious and tasty option for lunch. The roasted veggies and zesty lemon dressing added so much flavor to the dish."
+  },
+  {
+    "id": 5,
+    "comment_name": "Daniel",
+    "image_path": "assets/jpeg/avatar05.jpg",
+    "comment_title": "Amazing Stir-Fry",
+    "comment_text": "The Mouthwatering Chicken Stir-Fry recipe was a big hit with my family. The combination of tender chicken, colorful veggies, and savory sauce was absolutely amazing!"
+  },
+  {
+    "id": 6,
+    "comment_name": "Olivia",
+    "image_path": "assets/jpeg/avatar06.jpg",
+    "comment_title": "Refreshing Smoothie",
+    "comment_text": "The Refreshing Watermelon Smoothie was a perfect summer treat. The fresh watermelon and hint of mint made it so refreshing and enjoyable."
+  },
+  {
+    "id": 7,
+    "comment_name": "David",
+    "image_path": "assets/jpeg/avatar07.jpg",
+    "comment_title": "Comforting Soup",
+    "comment_text": "The Cream Tomato Basil Soup was a comforting and delicious meal on a chilly day. It paired perfectly with a slice of crusty bread."
+  },
+  {
+    "id": 8,
+    "comment_name": "Sophia",
+    "image_path": "assets/jpeg/avatar08.jpg",
+    "comment_title": "Homemade Jam Success",
+    "comment_text": "I made the Homemade Berry Jam using fresh berries, and it turned out wonderfully! The sweet and tangy flavors were absolutely delightful."
+  },
+  {
+    "id": 9,
+    "comment_name": "Ethan",
+    "image_path": "assets/jpeg/avatar09.jpg",
+    "comment_title": "Perfect Pancakes",
+    "comment_text": "The Fluffy Pancakes with Maple Syrup were a hit at breakfast! They were light, fluffy, and the maple syrup added the perfect touch of sweetness."
+  }
+]

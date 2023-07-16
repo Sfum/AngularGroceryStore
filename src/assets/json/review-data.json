@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "reviewer_name": "John Doe",
+    "image_path": "assets/jpeg/avatar01.jpg",
+    "review": "The customer service of this online shop is outstanding! The support team is responsive, helpful, and goes above and beyond to address any concerns. I'm always impressed by their professionalism and dedication. Highly recommended!"
+  },
+  {
+    "id": 2,
+    "reviewer_name": "Jane Smith",
+    "image_path": "assets/jpeg/avatar02.jpg",
+    "review": "Unfortunately, I had a negative experience with the customer service of this online shop. The response time was slow, and the support team was unhelpful in resolving my issue. Improvement is needed in terms of efficiency and effectiveness."
+  },
+  {
+    "id": 3,
+    "reviewer_name": "Mike Johnson",
+    "image_path": "assets/jpeg/avatar03.jpg",
+    "review": "I've been a loyal customer of this online shop for years, and their customer service is consistently excellent. The support team is prompt, knowledgeable, and always ready to assist. They make the online shopping experience a breeze!"
+  },
+  {
+    "id": 4,
+    "reviewer_name": "Emily Wilson",
+    "image_path": "assets/jpeg/avatar04.jpg",
+    "review": "The customer service of this online shop is exceptional. The support team is friendly, helpful, and provides quick solutions to any issues. It's reassuring to know that help is just a click away!"
+  },
+  {
+    "id": 5,
+    "reviewer_name": "David Thompson",
+    "image_path": "assets/jpeg/avatar05.jpg",
+    "review": "Regrettably, I had a disappointing experience with the customer service of this online shop. The support team was unresponsive and seemed disinterested in resolving my problem. Improvement is necessary in terms of attentiveness and effectiveness."
+  },
+  {
+    "id": 6,
+    "reviewer_name": "Sarah Adams",
+    "image_path": "assets/jpeg/avatar06.jpg",
+    "review": "The customer service provided by this online shop is outstanding. The support team is attentive, friendly, and always willing to assist. They make online shopping a breeze and provide peace of mind!"
+  },
+  {
+    "id": 7,
+    "reviewer_name": "Michael Lee",
+    "image_path": "assets/jpeg/avatar07.jpg",
+    "review": "I've had only positive experiences with the customer service of this online shop. The support team is responsive, knowledgeable, and efficient in resolving any issues. They truly value their customers!"
+  },
+  {
+    "id": 8,
+    "reviewer_name": "Amy Chen",
+    "image_path": "assets/jpeg/avatar08.jpg",
+    "review": "The customer service of this online shop is exceptional. The support team is friendly, professional, and always goes the extra mile to ensure customer satisfaction. I'm impressed by their commitment to providing a great experience!"
+  }
+]
+
+
+
+
