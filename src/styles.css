@@ -1,1 +1,206 @@
-/* You can add global styles to this file, and also import other style files */
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary)
+}
+
+/* FONTS */
+
+.font-primary {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-lg);
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-1);
+
+}
+
+.font-secondary {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-sm);
+  text-align: left;
+  text-transform: initial;
+  color: var(--color-2);
+
+}
+
+.font-secondary-small {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-xsm);
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--color-3);
+  opacity: 60%;
+}
+
+.font-label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-vlg);
+  font-weight: var(--font-weight-lg);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-1);
+}
+
+/* MARGINS */
+
+.margin-sm {
+  margin-right: 5px;
+  margin-bottom: 5px
+}
+
+.margin-md {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.margin-lg {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.margin-lg-center {
+  margin: 30px;
+}
+
+.margin-label {
+  margin: 40px 20px;
+}
+
+/* BUTTONS */
+
+.button__primary {
+  background-color: darkolivegreen;
+  color: white;
+  box-shadow: 3px 6px 10px black;
+  width: 200px;
+  border: 1px solid white;
+}
+
+
+/* CONTAINERS */
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* VARIABLES */
+
+:root {
+  --height: 100vh;
+
+  /*Font size*/
+
+  --font-size-vsm: 10px;
+  --font-size-xsm: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xlg: 22px;
+  --font-size-vlg: 24px;
+
+  /*Colors*/
+
+  --color-5: #7FFF00;
+  --color-4: #32CD32;
+  --color-3: #3b4b21;
+  --color-2: #4d602a;
+  --color-1: #556B2F;
+
+  /*Font family*/
+
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --font-fallback: 'Open Sans', sans-serif;
+
+  /*Font Weight*/
+
+  --font-weight-xsm: 400;
+  --font-weight-sm: 500;
+  --font-weight-md: 600;
+  --font-weight-lg: 700;
+  --font-weight-xlg: 800;
+
+  /*Margin*/
+
+  --margin-xsm: 5px;
+  --margin-sm: 10px;
+  --margin-md: 20px;
+  --margin-lg: 30px;
+  --margin-xlg: 40px;
+
+  /*Padding*/
+
+  --padding-xsm: 5px;
+  --padding-sm: 10px;
+  --padding-md: 20px;
+  --padding-lg: 30px;
+  --padding-xlg: 40px;
+
+  /*Border Radius*/
+
+  --border-radius-vsm: 2px;
+  --border-radius-xsm: 4px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 32px;
+  --border-radius-xlg: 64px;
+  --border-radius-vlg: 128px;
+
+  /*Border colors*/
+
+  --border-color-5: #feffff;
+  --border-color-4: #def2f1;
+  --border-color-3: #3aafa9;
+  --border-color-2: #2b7a78;
+  --border-color-1: #17252a;
+
+  /*Border Lines*/
+
+  --border-line: 1px solid #eee;
+  --border-width1: 1px;
+
+  /*Contrast*/
+
+  --opacity-xsm: 0.9;
+  --opacity-sm: 0.8;
+  --opacity-md: 0.7;
+  --opacity-lg: 0.6;
+  --opacity-xlg: 0.5;
+
+  /*Width*/
+
+  --width100: 100%;
+  --width90: 90%;
+  --width80: 80%;
+  --width70: 70%;
+  --width60: 60%;
+  --width50: 50%;
+  --width40: 40%;
+  --width30: 30%;
+  --width20: 20%;
+
+  /*Height*/
+
+  --height100: 100%;
+  --height90: 90%;
+  --height80: 80%;
+  --height70: 70%;
+  --height60: 60%;
+  --height50: 50%;
+  --height40: 40%;
+  --height30: 30%;
+  --height20: 20%;
+}
