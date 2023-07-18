@@ -31,13 +31,8 @@
   },
   {
     "id": 7,
-<<<<<<< HEAD
-    "supplier_name": "Procter & Gamble",
-    "supplier_description": "Provider of a wide range of household and personal care products"
-=======
     "supplier_name": "Veganista",
     "supplier_description": "Provider of vegan food and organic products"
->>>>>>> fc2cc92 ([feat]: Create JSON Mock-Up Data files)
   },
   {
     "id": 8,
@@ -56,13 +51,8 @@
   },
   {
     "id": 11,
-<<<<<<< HEAD
-    "supplier_name": "L'Oreal",
-    "supplier_description": "Specializing in cosmetics, skincare, haircare, and beauty products"
-=======
     "supplier_name": "Hello, Fresh",
     "supplier_description": "Specializing in fresh food and vegetables."
->>>>>>> fc2cc92 ([feat]: Create JSON Mock-Up Data files)
   },
   {
     "id": 12,
@@ -81,13 +71,8 @@
   },
   {
     "id": 15,
-<<<<<<< HEAD
-    "supplier_name": "Colgate-Palmolive",
-    "supplier_description": "Provider of oral care, personal care, and household products"
-=======
     "supplier_name": "Tesco",
     "supplier_description": "Provider of wide range of products, including groceries, household and more.."
->>>>>>> fc2cc92 ([feat]: Create JSON Mock-Up Data files)
   },
   {
     "id": 16,
@@ -106,13 +91,8 @@
   },
   {
     "id": 19,
-<<<<<<< HEAD
-    "supplier_name": "Johnson & Johnson",
-    "supplier_description": "Provider of healthcare products, including baby care, pharmaceuticals, and medical devices"
-=======
     "supplier_name": "Netto Discount",
     "supplier_description": "Provider of a wide variety of products, including food, baby care, household and more"
->>>>>>> fc2cc92 ([feat]: Create JSON Mock-Up Data files)
   },
   {
     "id": 20,
