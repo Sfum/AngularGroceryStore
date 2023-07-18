@@ -1,0 +1,27 @@
+<div class="product-grid__container">
+  <div class="product-grid__container-main">
+    <mat-card class="product-grid__navigation">
+      <form class="product-grid__icon">
+        <mat-form-field>
+          <mat-label>Search products...</mat-label>
+          <input matInput
+                 class="card__input--field"
+                 type="text"
+                 name="search"
+                 [(ngModel)]="searchText"
+                 autocomplete="off"
+                 placeholder="Search products..."
+          />
+        </mat-form-field>
+      </form>
+    </mat-card>
+    <div class="product-grid__product--grid">
+      <app-product-card-detail
+        class="product-grid__product--card"
+        *ngFor="let product of products$ | async; index as i"
+        [product]="product"
+        >
+      </app-product-card-detail>
+    </div>
+  </div>
+</div>

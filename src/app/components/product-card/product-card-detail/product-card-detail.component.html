@@ -1,0 +1,65 @@
+<mat-card class="product-card__container">
+  <article *ngIf="product">
+    <div class="product-card__shell">
+      <img class="product-card__image" [src]="product.product_image" width="260"
+           alt="Product Image"/>
+      <div class="product-card-bottom__wrapper">
+        <span class="font-primary">{{ product.product_name | slice:0:25 }}</span>
+        <hr class="product-card__line">
+        <span class="font-secondary">{{ product.supplierId }}</span>
+        <hr class="product-card__line">
+        <span class="font-secondary-small">{{ product.categoryId }} </span>
+
+        <div class="product-card__icon-field">
+          <mat-icon
+            class="product-card__icon">
+            open_in_new
+          </mat-icon>
+          <mat-icon
+            class="product-card__icon"
+            (click)="addToWishlist(product)"
+            *ngIf="product.quantity > 0; else reMindMe"
+          >favorite_border
+          </mat-icon>
+          <mat-icon
+            class="product-card__icon"
+            (click)="addToCompare(product)"
+            *ngIf="product.quantity > 0; else reMindMe"
+          >compare_arrows
+          </mat-icon>
+          <ng-template #reMindMe>
+            <mat-icon class="card__icon">list</mat-icon>
+          </ng-template>
+          <mat-icon
+            class="product-card__icon"
+            [style.color]="product.quantity == 0 ? 'red' : 'green'"
+          >fiber_manual_record
+          </mat-icon>
+          <mat-icon class="product-card__icon">check_circle</mat-icon>
+          <mat-icon class="product-card__icon">question_answer</mat-icon>
+          <mat-icon class="product-card__icon">phone</mat-icon>
+        </div>
+
+        <button
+          mat-raised-button
+          class="product-card__button button__primary"
+          (click)="addToCart(product)"
+          *ngIf="product.quantity > 0; else outOfStock"
+        >
+          <mat-icon
+            class="product-card__icon--cart"
+            [style.color]="product.quantity == 0 ? 'red' : 'green'"
+          >shopping_cart
+          </mat-icon
+          >
+          {{ product.price }}
+        </button>
+        <ng-template class="button__primary" #outOfStock>
+          <div class="product-card__outOfStock">Out of stock!</div>
+        </ng-template
+        >
+        <span *ngIf="product.quantity > 0"></span>
+      </div>
+    </div>
+  </article>
+</mat-card>
