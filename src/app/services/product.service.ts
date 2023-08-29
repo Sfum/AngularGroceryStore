@@ -31,7 +31,7 @@ export class ProductService {
 
   products$ = this.httpClient
     .get<Product[]>(this.MOCK_URL)
-    .pipe(tap((data) => console.log('Product: ', JSON.stringify))); // get products from json file
+    .pipe(tap((data) => console.log('Product: ', JSON.stringify)));
 
   categories$ = this.categoryService.categories$
   suppliers$ = this.supplierService.suppliers$

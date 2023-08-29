@@ -1,0 +1,94 @@
+.container {
+  margin: var(--margin-lg);
+}
+
+img {
+  position: absolute;
+  top: 20px;
+
+}
+
+.landing__image {
+  background-image: url('https://st4.depositphotos.com/16806292/22955/i/600/depositphotos_229556868-stock-photo-women-hands-hold-full-paper.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.landing__image-title {
+  position: absolute;
+  top: 45%;
+  left: 75%;
+  font-size: 62px;
+  color: white;
+  font-family: var(--font-primary);
+  box-shadow: #17252a 3px 6px 10px;
+  padding: var(--padding-sm);
+}
+
+img {
+  position: absolute;
+  top: 20px;
+
+}
+
+.landing__grid {
+  display: grid;
+  grid-template-rows: 400px 1fr;
+  gap: 10px;
+}
+
+.landing__grid-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-row: 1/2;
+  height: 400px;
+}
+
+.landing__grid-top-left {
+  background-image: url('https://st3.depositphotos.com/5669842/36593/i/600/depositphotos_365939322-stock-photo-paper-bag-different-food-wooden.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+}
+
+.landing__float-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__primary {
+  background-color: darkolivegreen;
+  color: white;
+  box-shadow: 3px 6px 10px black;
+  width: 200px;
+  border: 1px solid white;
+}
+
+.landing__grid-top-middle {
+  background-image: url('https://st3.depositphotos.com/1006899/12789/i/950/depositphotos_127893414-stock-photo-special-offer-sign-symbol.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/3;
+}
+
+.landing__grid-top-right {
+  background-image: url('https://st3.depositphotos.com/9880800/13987/i/600/depositphotos_139877122-stock-photo-woman-preparing-salad.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-column: 3/4;
+}
+
+.landing__label {
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-1);
+  margin: 80px
+}

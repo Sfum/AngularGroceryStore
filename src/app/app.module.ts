@@ -19,6 +19,7 @@ import {RouterLink, RouterOutlet, Routes} from "@angular/router";
 
 
 import {RouterModule} from "@angular/router";
+import { LandingComponent } from './components/landing/landing.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: ProductCardComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
     AppComponent,
     ProductCardComponent,
     ProductCardDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
