@@ -1,0 +1,15 @@
+<mat-card class="container" *ngIf="category">
+  <div class="category__image">
+    <img [src]="category.category_image" width="240px;" alt=""/>
+  </div>
+  <div>
+    <div class="category__field--wrapper">
+      <div class="category__field-label font-primary">
+        {{ category.category_name }}
+      </div>
+    </div>
+    <div class="category__field--info font-secondary">
+      {{category.category_description | slice:0:180}}...
+    </div>
+  </div>
+</mat-card>

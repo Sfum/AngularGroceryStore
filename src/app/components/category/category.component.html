@@ -1,0 +1,9 @@
+<div class="category__container">
+  <div class="font-primary margin-label font-label">Categories</div>
+  <div class="category__details">
+    <app-category-detail
+      *ngFor="let category of categoriesView$ | async | slice: 0: 9"
+      [category]="category">
+    </app-category-detail>
+  </div>
+</div>
