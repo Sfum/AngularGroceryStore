@@ -12,8 +12,6 @@ import {
 } from "rxjs";
 import {CategoryService} from "./category.service";
 import {SupplierService} from "./supplier.service";
-import {Router} from "@angular/router";
-import {Location} from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +26,6 @@ export class ProductService {
     private httpClient: HttpClient,
     private categoryService: CategoryService,
     private supplierService: SupplierService,
-    public router: Router,
-    public location: Location
   ) {
   }
 

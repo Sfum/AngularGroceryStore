@@ -36,10 +36,6 @@
   opacity: var(--opacity-sm);
   font-size: 24px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80a460b ([feat]: Create Product Card)
 .product-card__icon--cart {
   font-size: 20px;
 }
@@ -51,12 +47,8 @@
 }
 
 .product-card__button {
-<<<<<<< HEAD
-  width: 260px;
-=======
-  width: 300px
->>>>>>> 80a460b ([feat]: Create Product Card)
-}
+
+  width: 300px}
 
 .product-card__outOfStock {
   font-family: var(--font-primary);
@@ -66,9 +58,5 @@
   left: 90px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 80a460b ([feat]: Create Product Card)
 @media only screen and (max-width: 900px) {
 }

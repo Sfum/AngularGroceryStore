@@ -13,9 +13,17 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
-import { HeaderComponent } from './shared/header/header.component';
+import {HeaderComponent } from './shared/header/header.component';
 import {MatMenuModule} from "@angular/material/menu";
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterOutlet, Routes} from "@angular/router";
+
+
+import {RouterModule} from "@angular/router";
+
+const routes: Routes = [
+  {path: '', pathMatch: 'full', component: ProductCardComponent},
+
+]
 
 @NgModule({
   declarations: [
@@ -34,7 +42,9 @@ import {RouterLink} from "@angular/router";
     MatButtonModule,
     HttpClientModule,
     MatMenuModule,
-    RouterLink
+    RouterLink,
+    RouterOutlet,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],
