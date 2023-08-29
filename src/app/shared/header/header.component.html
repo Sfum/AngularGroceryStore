@@ -1,0 +1,22 @@
+<div class="container">
+  <button
+    mat-raised-button
+    class="navigation__cart--menu"
+    [matMenuTriggerFor]="menu"
+  >
+    Pages
+  </button>
+  <mat-menu #menu="matMenu" class="navigation__cart--menu">
+    <button mat-menu-item routerLink="home">Home</button>
+    <button mat-menu-item routerLink="category">Categories</button>
+    <button mat-menu-item routerLink="login">Login</button>
+    <button mat-menu-item routerLink="faq">Faq</button>
+    <button mat-menu-item routerLink="landing">Landing</button>
+    <button mat-menu-item routerLink="not-found">Not Found</button>
+    <button mat-menu-item routerLink="contact">Contact</button>
+    <button mat-menu-item routerLink="blog">Blog</button>
+    <button mat-menu-item routerLink="reviews">Reviews</button>
+  </mat-menu>
+  <div class="navigation__label">GROCERY STORE</div>
+
+</div>

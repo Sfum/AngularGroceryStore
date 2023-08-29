@@ -13,12 +13,16 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { HeaderComponent } from './shared/header/header.component';
+import {MatMenuModule} from "@angular/material/menu";
+import {RouterLink} from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductCardComponent,
-    ProductCardDetailComponent
+    ProductCardDetailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import {MatButtonModule} from "@angular/material/button";
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,27 @@
+.container {
+  height: 110px;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background-color: darkolivegreen;
+  border-radius: var(--border-radius-sm);
+  margin: var(--margin-lg);
+}
+.navigation__label {
+  grid-column: 2/3;
+  font-size: 28px;
+  color: white;
+  margin: auto;
+}
+.navigation__cart {
+  grid-column: 3/4;
+  margin: auto;
+  color: white;
+}
+.navigation__cart--menu {
+  grid-column: 1/2;
+  color: white;
+  margin: auto;
+}
+.navigation__cart--icon {
+  margin: auto;
+}
