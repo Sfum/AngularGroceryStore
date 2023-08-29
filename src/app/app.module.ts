@@ -20,6 +20,9 @@ import {RouterLink, RouterOutlet, Routes} from "@angular/router";
 
 import {RouterModule} from "@angular/router";
 import { LandingComponent } from './components/landing/landing.component';
+import { CategoryComponent } from './components/category/category.component';
+import { CategoryDetailComponent } from './components/category/category-detail/category-detail.component';
+import { ViewCategoryComponent } from './components/category/view-category/view-category.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: ProductCardComponent},
@@ -32,7 +35,10 @@ const routes: Routes = [
     ProductCardComponent,
     ProductCardDetailComponent,
     HeaderComponent,
-    LandingComponent
+    LandingComponent,
+    CategoryComponent,
+    CategoryDetailComponent,
+    ViewCategoryComponent
   ],
   imports: [
     BrowserModule,
