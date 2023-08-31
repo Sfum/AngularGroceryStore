@@ -114,4 +114,10 @@ export class ProductService {
       categories,
     }))
   );
+    sortProductsByPriceAscending(products: Product[]): Product[] {
+        return products.slice().sort((a, b) => a.price - b.price); // sort products by price ascending
+    }
+    sortProductsBySalesDescending(products: Product[]): Product[] {
+        return products.slice().sort((a, b) => b.sales - a.sales); // sort products by sales descending
+    }
 }

@@ -1,0 +1,40 @@
+.sidebar__container {
+  display: grid;
+  grid-template-rows: 160px 1fr;
+  align-content: center;
+  height: 240px;
+  width: 220px;
+  margin: 20px 0 0 0;
+  padding: var(--margin-md);
+  border-radius: var(--border-radius-xsm);
+}
+
+.sidebar__card--image {
+  padding: var(--padding-sm);
+  grid-row: 1/2
+}
+
+.sidebar__card--image:hover {
+  opacity: 80%;
+}
+
+.sidebar__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2/3;
+}
+
+.sidebar__button {
+  position: absolute;
+  font-size: 16px;
+  color: #252525;
+  margin: var(--margin-md);
+  width: 210px;
+  top: 170px;
+}
+
+.sidebar_outStock {
+  position: absolute;
+  margin: var(--margin-sm);
+  top: 175px;
+}

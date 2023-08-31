@@ -1,0 +1,10 @@
+<mat-card class="sidebar__container" *ngIf="product">
+  <img class="sidebar__card--image"
+       [src]="product.product_image"
+       height="130" width="130"
+       alt="Product Image"/>
+  <div class="sidebar__text-wrapper">
+    <span class="sidebar__label--title font-primary">{{ product.product_name | slice:0:13 }}...</span>
+    <span class="sidebar__label--text font-secondary-small">${{ product.price }}</span>
+  </div>
+</mat-card>
