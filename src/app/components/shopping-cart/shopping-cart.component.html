@@ -1,0 +1,16 @@
+<div class="cart__title-label">
+  <div class="font-primary margin-label font-label">Shopping Cart</div>
+</div>
+<div class="container">
+  <mat-card class="cart__checkout--total">
+    <h2 class="cart__price-label font-label">Total Price:</h2>
+    <div class="cart__price-amount font-label">{{ total | currency }}</div>
+    <hr/>
+    <div class="cart__checkout">
+      <button mat-raised-button class="margin-lg-center" (click)="onCheckout()">Checkout</button>
+    </div>
+  </mat-card>
+  <app-shopping-cart-detail *ngIf="products$" [products]="products"
+
+  ></app-shopping-cart-detail>
+</div>

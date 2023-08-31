@@ -1,0 +1,30 @@
+<mat-card class="cart__items-container"
+          *ngFor="let product of products; let i = index">
+
+  <div>
+    <img class="cart__product-image"
+         [src]="product.product_image"
+         width="120"
+         alt=""/>
+  </div>
+  <mat-icon
+    [matBadge]="product.quantity"
+    matBadgeSize="large"
+    matBadgeColor="warn">
+  </mat-icon>
+  <div class="cart__label-wrapper">
+    <div class="font-primary">{{ product.supplierId }}</div>
+    <div class="font-secondary">{{ product.product_name }}</div>
+  </div>
+  <div class="cart__quantity-label">
+    <input [(ngModel)]="product.quantity"
+           [ngModelOptions]="{ standalone: true }"
+           min="1"
+           type="number"
+           value="1"/>
+  </div>
+  <div class="cart__card_price-amount font-label ">
+    ${{ product.quantity * product.price | number : "1.2-2" }}
+  </div>
+
+</mat-card>

@@ -23,6 +23,9 @@ import { LandingComponent } from './components/landing/landing.component';
 import { CategoryComponent } from './components/category/category.component';
 import { CategoryDetailComponent } from './components/category/category-detail/category-detail.component';
 import { ViewCategoryComponent } from './components/category/view-category/view-category.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ShoppingCartDetailComponent } from './components/shopping-cart/shopping-cart-detail/shopping-cart-detail.component';
+import {MatBadgeModule} from "@angular/material/badge";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: ProductCardComponent},
@@ -38,7 +41,9 @@ const routes: Routes = [
     LandingComponent,
     CategoryComponent,
     CategoryDetailComponent,
-    ViewCategoryComponent
+    ViewCategoryComponent,
+    ShoppingCartComponent,
+    ShoppingCartDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,7 @@ const routes: Routes = [
     RouterLink,
     RouterOutlet,
     RouterModule.forRoot(routes),
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
