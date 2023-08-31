@@ -47,5 +47,12 @@ export class CartService {
       this.saveCart();
     }
   }
-
+  addWishlistToCart(product: any) {
+    if (!this.productInCart(product)) {
+      product.quantity = 1;
+      this.addToCart(product);
+    } else {
+      alert('Item Already In Cart');
+    }
+  }
 }

@@ -15,10 +15,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {HeaderComponent } from './shared/header/header.component';
 import {MatMenuModule} from "@angular/material/menu";
-import {RouterLink, RouterOutlet, Routes} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 
-
-import {RouterModule} from "@angular/router";
 import { LandingComponent } from './components/landing/landing.component';
 import { CategoryComponent } from './components/category/category.component';
 import { CategoryDetailComponent } from './components/category/category-detail/category-detail.component';
@@ -26,11 +24,11 @@ import { ViewCategoryComponent } from './components/category/view-category/view-
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ShoppingCartDetailComponent } from './components/shopping-cart/shopping-cart-detail/shopping-cart-detail.component';
 import {MatBadgeModule} from "@angular/material/badge";
-
-const routes: Routes = [
-  {path: '', pathMatch: 'full', component: ProductCardComponent},
-
-]
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ReviewComponent } from './components/review/review.component';
+import { ReviewDetailComponent } from './components/review/review-detail/review-detail.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +41,11 @@ const routes: Routes = [
     CategoryDetailComponent,
     ViewCategoryComponent,
     ShoppingCartComponent,
-    ShoppingCartDetailComponent
+    ShoppingCartDetailComponent,
+    WishlistComponent,
+    WishlistDetailComponent,
+    ReviewComponent,
+    ReviewDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +59,8 @@ const routes: Routes = [
     MatMenuModule,
     RouterLink,
     RouterOutlet,
-    RouterModule.forRoot(routes),
     MatBadgeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
