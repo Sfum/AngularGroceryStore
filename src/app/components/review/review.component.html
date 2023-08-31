@@ -1,0 +1,5 @@
+<div class="review__container">
+  <div class="font-primary margin-label font-label">Reviews</div>
+  <app-review-detail *ngFor="let review of fetchReviews$ | async"
+                   [review]="review"></app-review-detail>
+</div>

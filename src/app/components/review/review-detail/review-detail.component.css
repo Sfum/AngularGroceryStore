@@ -1,0 +1,14 @@
+.review__container {
+  display: grid;
+  grid-template-columns: 0.1fr 0.9fr;
+  margin: var(--margin-md)
+}
+.review__image {
+  grid-column: 1 / 2;
+  border-radius: 50%;
+  margin: var(--margin-md);
+}
+.review__text {
+  grid-column: 2 / 3;
+  margin: var(--margin-md);
+}

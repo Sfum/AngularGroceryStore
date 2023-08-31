@@ -1,0 +1,7 @@
+<mat-card class="review__container" *ngIf="review">
+  <img class="review__image" [src]="review.image_path" width="70px" alt="UserImage">
+  <div class="review__text">
+    <div class="font-primary">{{review.reviewer_name}}</div>
+    <div class="font-secondary">{{review.review}}</div>
+  </div>
+</mat-card>
