@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ProductService} from "../../services/product.service";
 import {Product} from "../../models/product";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'app-product-card',
@@ -10,10 +11,14 @@ import {Product} from "../../models/product";
 export class ProductCardComponent {
   searchText: any;
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private cartService: CartService) {
   }
   products!: Product[];
 
-  products$ = this.productService.productsFiltered$
 
+  products$ = this.productService.productsFiltered$
+  onAddToCart(product: any) {
+    this.cartService.addToCart(product)
+  }
 }

@@ -20,6 +20,7 @@
         class="product-grid__product--card"
         *ngFor="let product of products$ | async; index as i"
         [product]="product"
+        (addToCartEvent)="onAddToCart($event)"
         >
       </app-product-card-detail>
     </div>
