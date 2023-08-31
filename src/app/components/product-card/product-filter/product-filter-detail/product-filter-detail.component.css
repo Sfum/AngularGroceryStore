@@ -1,0 +1,12 @@
+.sidebar__container {
+
+}
+
+.sidebar__filter--label {
+    font-family: var(--font-primary);
+    text-align: center;
+    color: white;
+}
+
+.sidebar__form--control {
+}

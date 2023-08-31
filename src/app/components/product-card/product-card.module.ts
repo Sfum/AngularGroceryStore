@@ -9,6 +9,8 @@ import {MatCardModule} from "@angular/material/card";
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarChartComponent } from './sidebar/sidebar-chart/sidebar-chart.component';
 import { SidebarChartDetailComponent } from './sidebar/sidebar-chart/sidebar-chart-detail/sidebar-chart-detail.component';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { ProductFilterDetailComponent } from './product-filter/product-filter-detail/product-filter-detail.component';
 
 @NgModule({
   imports: [
@@ -19,16 +21,19 @@ import { SidebarChartDetailComponent } from './sidebar/sidebar-chart/sidebar-cha
     RouterLink,
     MatCardModule,
   ],
-  exports: [
-    SidebarChartComponent
+    exports: [
+        SidebarChartComponent,
+        ProductFilterComponent
 
-  ],
+    ],
   declarations: [
 
 
     SidebarComponent,
          SidebarChartComponent,
-         SidebarChartDetailComponent
+         SidebarChartDetailComponent,
+         ProductFilterComponent,
+         ProductFilterDetailComponent,
   ]
 })
 export class ProductCardModule {
