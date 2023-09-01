@@ -30,6 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReviewComponent } from './components/review/review.component';
 import { ReviewDetailComponent } from './components/review/review-detail/review-detail.component';
 import {ProductCardModule} from "./components/product-card/product-card.module";
+import { CompareComponent } from './components/compare/compare.component';
+import { CompareDetailComponent } from './components/compare/compare-detail/compare-detail.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import {ProductCardModule} from "./components/product-card/product-card.module";
     WishlistComponent,
     WishlistDetailComponent,
     ReviewComponent,
-    ReviewDetailComponent
+    ReviewDetailComponent,
+    CompareComponent,
+    CompareDetailComponent
   ],
   imports: [
     BrowserModule,

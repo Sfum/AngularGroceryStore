@@ -1,0 +1,40 @@
+.compare__container {
+  display: flex;
+  flex-direction: unset;
+  align-content: center;
+  margin: 40px 300px 0;
+  height: 100vh;
+  border-radius: var(--border-radius-sm);
+}
+
+
+
+.compare__table--th {
+  width: 300px;
+  height: 80px;
+}
+
+.compare__table--th-long {
+  width: 300px;
+  height: 220px;
+}
+
+.compare__product--image {
+  height: 100px;
+  padding: 20px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: var(--padding-md);
+  height: 140px;
+  width: 180px;
+}
+
+tr:nth-child(even) {
+  background-color: gainsboro;
+
+}
+
+

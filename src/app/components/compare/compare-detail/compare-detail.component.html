@@ -1,0 +1,87 @@
+<mat-card class="compare__container">
+  <table class="compare__table">
+    <tr>
+      <th class="compare__table--th-long font-primary margin-lg-center">Name</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__table--td-long">
+        <div>
+          <img class="compare__product--image"
+               [src]="product.product_image"
+               height="120"
+               alt=""/>
+        </div>
+        <div class="font-primary center-items">
+          {{ product.product_name | slice:0:13}}...
+        </div>
+        <div class="compare__icon center-items">
+          <mat-icon [routerLink]="['/products/product-detail', product._id]">open_in_new
+          </mat-icon>
+          <mat-icon
+            (click)="addToWishlist(product)"
+            *ngIf="product.quantity > 0; else reMindMe"
+          >
+            favorite_border
+          </mat-icon>
+          <mat-icon
+            (click)="addToCart(product)"
+            *ngIf="product.quantity > 0; else reMindMe"
+          >shopping_cart
+          </mat-icon>
+          <ng-template #reMindMe>
+            <mat-icon>list</mat-icon>
+          </ng-template>
+          <mat-icon
+            [style.color]="product.quantity == 0 ? 'red' : 'green'">
+            fiber_manual_record
+          </mat-icon>
+          <mat-icon
+            (click)="removeFromCompare(product)"
+            *ngIf="product.quantity > 0; else reMindMe">delete_forever
+          </mat-icon>
+        </div>
+      </td>
+    </tr>
+    <tr class="compare__table-tr">
+      <th class="compare__table--th font-primary margin-lg-center">Description</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__text-label font-secondary margin-lg-center">
+        {{ product.short_description }}
+      </td>
+    </tr>
+    <tr>
+      <th class="compare__table--th font-primary margin-lg-center">Supplier</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__text-label font-secondary margin-lg-center">
+        {{ product.supplierId }}
+      </td>
+    </tr>
+    <tr>
+      <th class="compare__table--th font-primary margin-lg-center">Price</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__text-label font-secondary margin-lg-center">
+        {{ product.price }}
+      </td>
+    </tr>
+    <tr>
+      <th class="compare__table--th font-primary margin-lg-center">Country Of Origin</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__text-label font-secondary margin-lg-center">
+        {{ product.made_in_country }}
+      </td>
+    </tr>
+    <tr>
+      <th class="compare__table--th font-primary margin-lg-center">Climate Friendly</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__text-label font-secondary margin-lg-center">
+        {{ product.climate_friendly }}
+      </td>
+    </tr>
+    <tr>
+      <th class="compare__table--th font-primary margin-lg-center">Number Of Items</th>
+      <td *ngFor="let product of products | slice : 0 : 5; let i = index"
+          class="compare__text-label font-secondary margin-lg-center">
+        {{ product.number_of_items }}
+      </td>
+    </tr>
+  </table>
+</mat-card>

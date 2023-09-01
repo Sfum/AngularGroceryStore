@@ -120,4 +120,7 @@ export class ProductService {
     sortProductsBySalesDescending(products: Product[]): Product[] {
         return products.slice().sort((a, b) => b.sales - a.sales); // sort products by sales descending
     }
+  GetProducts() {
+    return this.httpClient.get(`${this.MOCK_URL}`);  // get products from json file
+  }
 }

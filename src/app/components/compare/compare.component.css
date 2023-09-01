@@ -1,0 +1,9 @@
+.compare_title-label {
+  margin: 0 300px 0;
+
+}
+
+.compare__button {
+  margin: var(--margin-sm);
+  width: 130px;
+}

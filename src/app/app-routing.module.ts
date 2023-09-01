@@ -7,6 +7,7 @@ import {WishlistComponent} from "./components/wishlist/wishlist.component";
 import {LandingComponent} from "./components/landing/landing.component";
 import {CategoryComponent} from "./components/category/category.component";
 import {ShoppingCartComponent} from "./components/shopping-cart/shopping-cart.component";
+import {CompareComponent} from "./components/compare/compare.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'wishlist', component: WishlistComponent},
   {path: 'landing', component: LandingComponent},
   {path: 'category', component: CategoryComponent},
+  {path: 'compare', component: CompareComponent},
 ]
 
 @NgModule({

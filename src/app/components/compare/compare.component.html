@@ -1,0 +1,13 @@
+<div class="compare_title-label">
+  <div class="font-primary margin-label font-label">Compare</div>
+  <button class="compare__button"
+          mat-raised-button
+          type="button">
+    Back
+  </button>
+</div>
+<app-compare-detail *ngIf="products$" [products]="products"
+                    (addToCartEvent)="addToCart($event)"
+                    (addToWishlistEvent)="addToWishlist($event)"
+                    (removeFromCompareEvent)="removeFromCompare($event)"
+></app-compare-detail>
