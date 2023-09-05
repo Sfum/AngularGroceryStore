@@ -12,6 +12,7 @@ import {
 } from "rxjs";
 import {CategoryService} from "./category.service";
 import {SupplierService} from "./supplier.service";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,7 @@ export class ProductService {
     private httpClient: HttpClient,
     private categoryService: CategoryService,
     private supplierService: SupplierService,
+    private router: Router
   ) {
   }
 
@@ -122,5 +124,14 @@ export class ProductService {
     }
   GetProducts() {
     return this.httpClient.get(`${this.MOCK_URL}`);  // get products from json file
+  }
+  onCartClick() {
+    this.router.navigate(['./shopping-cart']); // navigate to shopping cart page
+  }
+  onWishlistClick() {
+    this.router.navigate(['./wishlist']);
+  }
+  onCompareClick() {
+    this.router.navigate(['./compare']); // navigate to compare page
   }
 }

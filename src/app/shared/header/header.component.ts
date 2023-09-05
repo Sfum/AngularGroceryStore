@@ -10,5 +10,16 @@ export class HeaderComponent {
   constructor(
     private productService: ProductService) {}
 
+  onWishlistClick() {
+    this.productService.onWishlistClick();
+  }
+
+  onCartClick() {
+    this.productService.onCartClick();
+  }
+
+  onCompareClick() {
+    this.productService.onCompareClick();
+  }
 
 }

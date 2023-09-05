@@ -12,5 +12,12 @@ export class ShoppingCartDetailComponent {
   @Output() addToWishListEvent: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() removeFromCartEvent: EventEmitter<Product> = new EventEmitter<Product>();
 
+  removeFromCart(product: Product) {
+    this.removeFromCartEvent.emit(product);
+  }
+
+  addToWishlist(product: Product) {
+    this.addToWishListEvent.emit(product);
+  }
 
 }

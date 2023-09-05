@@ -1,24 +1,38 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ProductService} from "../../services/product.service";
 import {Product} from "../../models/product";
+import {CartService} from "../../services/cart.service";
+import {WishlistService} from "../../services/wishlist.service";
 
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
-export class ShoppingCartComponent   {
+export class ShoppingCartComponent implements OnInit{
 
   products: Product[] = [];
   products$ = this.productService.products$
 
   constructor(private productService: ProductService,
+              private cartService: CartService,
+              private wishlistService: WishlistService,
               public router: Router ) {
   }
 
   ngOnInit() {
+    this.cartService.loadCart();
+    this.products = this.cartService.getProduct();
 
+  }
+  addToWishlist(product: any) {
+    this.removeFromCart(product);
+    this.wishlistService.addToWishlist(product);
+  }
+  removeFromCart(product: any) {
+    this.cartService.removeProduct(product);
+    this.products = this.cartService.getProduct();
   }
 
   onCheckout() {

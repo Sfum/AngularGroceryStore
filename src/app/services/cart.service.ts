@@ -20,7 +20,6 @@ export class CartService {
     } else {
       alert('Product Already In Cart');
     }
-
   }
   addProductToCart(addedProduct: Product) {
     this.products.push(addedProduct);
@@ -46,6 +45,9 @@ export class CartService {
       this.products.splice(index, 1);
       this.saveCart();
     }
+  }
+  clearProducts() {
+    localStorage.clear();
   }
   addWishlistToCart(product: any) {
     if (!this.productInCart(product)) {

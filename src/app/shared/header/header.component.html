@@ -18,5 +18,15 @@
     <button mat-menu-item routerLink="reviews">Reviews</button>
   </mat-menu>
   <div class="navigation__label">GROCERY STORE</div>
-
+  <div class="navigation__cart">
+    <button mat-icon-button (click)="onWishlistClick()">
+      <mat-icon class="navigation__cart--icon">favorite</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onCompareClick()">
+      <mat-icon class="navigation__cart--icon">compare_arrows</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onCartClick()">
+      <mat-icon class="navigation__cart--icon">shopping_cart</mat-icon>
+    </button>
+  </div>
 </div>

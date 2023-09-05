@@ -11,6 +11,7 @@
     </div>
   </mat-card>
   <app-shopping-cart-detail *ngIf="products$" [products]="products"
-
+                            (removeFromCartEvent)="removeFromCart($event)"
+                            (addToWishListEvent)="addToWishlist($event)"
   ></app-shopping-cart-detail>
 </div>

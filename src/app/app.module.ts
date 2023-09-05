@@ -1,5 +1,5 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {ProductCardComponent} from './components/product-card/product-card.component';
@@ -13,25 +13,27 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
-import {HeaderComponent } from './shared/header/header.component';
+import {HeaderComponent} from './shared/header/header.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {RouterLink, RouterOutlet} from "@angular/router";
 
-import { LandingComponent } from './components/landing/landing.component';
-import { CategoryComponent } from './components/category/category.component';
-import { CategoryDetailComponent } from './components/category/category-detail/category-detail.component';
-import { ViewCategoryComponent } from './components/category/view-category/view-category.component';
-import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
-import { ShoppingCartDetailComponent } from './components/shopping-cart/shopping-cart-detail/shopping-cart-detail.component';
+import {LandingComponent} from './components/landing/landing.component';
+import {CategoryComponent} from './components/category/category.component';
+import {CategoryDetailComponent} from './components/category/category-detail/category-detail.component';
+import {ViewCategoryComponent} from './components/category/view-category/view-category.component';
+import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.component';
+import {
+  ShoppingCartDetailComponent
+} from './components/shopping-cart/shopping-cart-detail/shopping-cart-detail.component';
 import {MatBadgeModule} from "@angular/material/badge";
-import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
-import { AppRoutingModule } from './app-routing.module';
-import { ReviewComponent } from './components/review/review.component';
-import { ReviewDetailComponent } from './components/review/review-detail/review-detail.component';
+import {WishlistComponent} from './components/wishlist/wishlist.component';
+import {WishlistDetailComponent} from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import {AppRoutingModule} from './app-routing.module';
+import {ReviewComponent} from './components/review/review.component';
+import {ReviewDetailComponent} from './components/review/review-detail/review-detail.component';
 import {ProductCardModule} from "./components/product-card/product-card.module";
-import { CompareComponent } from './components/compare/compare.component';
-import { CompareDetailComponent } from './components/compare/compare-detail/compare-detail.component';
+import {CompareComponent} from './components/compare/compare.component';
+import {CompareDetailComponent} from './components/compare/compare-detail/compare-detail.component';
 
 @NgModule({
   declarations: [
