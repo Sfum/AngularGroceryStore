@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import {SnackbarService} from "./snackbar.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompareService {
-  constructor() {}
+  constructor(private snackbarService: SnackbarService) {}
 
   products: any[] = [];
 
@@ -13,6 +14,7 @@ export class CompareService {
       product.quantity = 1;
       this.addProductToCart(product);
       this.products = [...this.getProduct()];
+      this.snackbarService.showSnackbar(`\`${product.product_name}\` by \`${product.supplierId}\` added to Compare`);
       product.in_compare = !product.in_compare;
 
     } else {

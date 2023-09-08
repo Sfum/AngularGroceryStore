@@ -34,6 +34,10 @@ import {ReviewDetailComponent} from './components/review/review-detail/review-de
 import {ProductCardModule} from "./components/product-card/product-card.module";
 import {CompareComponent} from './components/compare/compare.component';
 import {CompareDetailComponent} from './components/compare/compare-detail/compare-detail.component';
+import { SnackbarComponent } from './shared/snackbar/snackbar.component';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +56,8 @@ import {CompareDetailComponent} from './components/compare/compare-detail/compar
     ReviewComponent,
     ReviewDetailComponent,
     CompareComponent,
-    CompareDetailComponent
+    CompareDetailComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +74,7 @@ import {CompareDetailComponent} from './components/compare/compare-detail/compar
     MatBadgeModule,
     AppRoutingModule,
     ProductCardModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

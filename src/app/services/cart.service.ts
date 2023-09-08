@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Product} from "../models/product";
+import {SnackbarService} from "./snackbar.service";
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ export class CartService {
   products: Product[] = [];
   subTotal: number | undefined;
 
-  constructor() {}
+  constructor(private snackbarService: SnackbarService) {}
 
   addToCart(product: Product) {
     if (!this.productInCart(product)) {
@@ -17,6 +18,7 @@ export class CartService {
       this.products = [...this.getProduct()];
       this.subTotal = product.price;
       product.in_cart = !product.in_cart;
+      this.snackbarService.showSnackbar(`\`${product.product_name}\` by \`${product.supplierId}\` added to Cart`);
     } else {
       alert('Product Already In Cart');
     }
