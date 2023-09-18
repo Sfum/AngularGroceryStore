@@ -18,6 +18,19 @@
   grid-column: 3/4;
 }
 
+@media (max-width: 599px) {
+  .product-grid__sidebar--right {
+    grid-column: 3/4;
+    display: none;
+  }
+  .product-grid__sidebar--left {
+    margin: 0 20px 20px 0;
+    grid-column: 1/2;
+    padding: 20px;
+    display: none;
+  }
+}
+
 .product-grid__product--grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -64,10 +77,3 @@
     display: none;
   }
 }
-@media only screen and (max-width: 1280px) {
-  .product-grid__button {
-    display: none;
-  }
-}
-
-
