@@ -1,49 +1,55 @@
 .cart__items-container {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 30px 30px 30px 30px;
-  grid-template-areas:
-    "product-image product-name"
-    "product-image quantity-price-label"
-    "product-image quantity-label"
-    "product-image remove-from-card";
   margin: 40px auto 40px;
   padding: 30px;
-  height: 160px;
-  width: 700px;
   border-radius: var(--border-radius-sm);
+  width: 700px;
+  height: 220px;
 }
 
-.cart__product-image {
-  grid-area: product-image;
+.cart__inner-wrapper {
   margin: var(--margin-sm);
 }
 
+.cart__product-image {
+  grid-column: 1/2;
+  margin: var(--margin-md);
+}
+
 .cart__label-wrapper {
-  grid-area: product-name;
+  margin: 30px;
+  grid-column: 2/3;
 }
 
 .cart__quantity-label {
-  grid-area: quantity-label;
+}
+.cart__badge {
+  position: absolute;
+  right: 500px;
+  bottom: 140px;
 }
 
 .cart__card_price-amount {
   font-size: 28px;
   position: absolute;
   right: 4rem;
-  bottom: 4.2rem;
+  bottom: 6.5rem;
 }
 
 .cart__remove-product {
-  grid-area: remove-from-card;
+  grid-column: 2/3;
 }
 
 .cart__remove-button {
   margin: var(--margin-md);
-  position: relative;
+  position: absolute;
+  left: 460px;
+  top: 170px
+
 }
 
 .cart__wishlist-button {
-  margin: var(--margin-md);
+  margin: var(--margin-sm);
   position: relative;
 }

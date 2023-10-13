@@ -15,7 +15,6 @@ export class ProductCardDetailComponent {
   @Output() addToWishlistEvent: EventEmitter<any> = new EventEmitter<any>();
   @Output() addToCompareEvent: EventEmitter<any> = new EventEmitter<any>();
 
-
   addToCart(product: any) {
     this.addToCartEvent.emit(product);
   }

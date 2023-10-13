@@ -1,41 +1,47 @@
 <mat-card class="cart__items-container"
           *ngFor="let product of products; let i = index">
 
-  <div>
+  <div class="cart__inner-wrapper">
     <img class="cart__product-image"
          [src]="product.product_image"
-         width="120"
+         height="120"
          alt=""/>
   </div>
-  <mat-icon
+
+  <mat-icon class="cart__badge"
     [matBadge]="product.quantity"
     matBadgeSize="large"
     matBadgeColor="warn">
   </mat-icon>
+
   <div class="cart__label-wrapper">
     <div class="font-primary">{{ product.supplierId }}</div>
     <div class="font-secondary">{{ product.product_name }}</div>
+
+
+    <div class="cart__quantity-label">
+      <input [(ngModel)]="product.quantity"
+             [ngModelOptions]="{ standalone: true }"
+             min="1"
+             type="number"
+             value="1"/>
+    </div>
+
+    <div class="cart__card_price-amount font-label ">
+      ${{ product.quantity * product.price | number : "1.2-2" }}
+    </div>
   </div>
-  <div class="cart__quantity-label">
-    <input [(ngModel)]="product.quantity"
-           [ngModelOptions]="{ standalone: true }"
-           min="1"
-           type="number"
-           value="1"/>
-  </div>
-  <div class="cart__card_price-amount font-label ">
-    ${{ product.quantity * product.price | number : "1.2-2" }}
-  </div>
-  <div class="cart__remove-product">
-    <button mat-fab
-            class="cart__remove-button"
-            (click)="removeFromCart(product)">
-      <mat-icon>delete_forever</mat-icon>
-    </button>
+
+  <div class="cart__remove-button">
     <button mat-fab
             class="cart__wishlist-button"
             (click)="addToWishlist(product)">
       <mat-icon>favorite_border</mat-icon>
+    </button>
+    <button mat-fab
+            class="cart__wishlist-button"
+            (click)="removeFromCart(product)">
+      <mat-icon>delete_forever</mat-icon>
     </button>
   </div>
 </mat-card>
