@@ -8,6 +8,7 @@ import {LandingComponent} from "./components/landing/landing.component";
 import {CategoryComponent} from "./components/category/category.component";
 import {ShoppingCartComponent} from "./components/shopping-cart/shopping-cart.component";
 import {CompareComponent} from "./components/compare/compare.component";
+import {ProductViewCardComponent} from "./components/product-card/product-view-card/product-view-card.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
     path: 'products',
     loadChildren: () => import('./components/product-card/product-card.module').then(x => x.ProductCardModule)
   },
+  {path: 'products/:id', component: ProductViewCardComponent},
   {path: 'shopping-cart', component: ShoppingCartComponent},
   {path: 'reviews', component: ReviewComponent},
   {path: 'wishlist', component: WishlistComponent},

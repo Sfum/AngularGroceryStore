@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
@@ -11,6 +11,7 @@ import { SidebarChartComponent } from './sidebar/sidebar-chart/sidebar-chart.com
 import { SidebarChartDetailComponent } from './sidebar/sidebar-chart/sidebar-chart-detail/sidebar-chart-detail.component';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { ProductFilterDetailComponent } from './product-filter/product-filter-detail/product-filter-detail.component';
+import { ProductViewCardComponent } from './product-view-card/product-view-card.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,9 @@ import { ProductFilterDetailComponent } from './product-filter/product-filter-de
          SidebarChartDetailComponent,
          ProductFilterComponent,
          ProductFilterDetailComponent,
-  ]
+         ProductViewCardComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductCardModule {
 }

@@ -6,7 +6,7 @@ import {
   catchError,
   combineLatest,
   EMPTY,
-  map,
+  map, Observable,
   shareReplay,
   tap
 } from "rxjs";
@@ -133,5 +133,13 @@ export class ProductService {
   }
   onCompareClick() {
     this.router.navigate(['./compare']); // navigate to compare page
+  }
+  GetProduct(id: any): Observable<any> {
+    let API_URL = `${this.MOCK_URL}/product/${id}`;
+    return this.httpClient.get(API_URL, { headers: this.httpHeaders }).pipe(
+      map((res: any) => {
+        return res || {};
+      })
+    );
   }
 }

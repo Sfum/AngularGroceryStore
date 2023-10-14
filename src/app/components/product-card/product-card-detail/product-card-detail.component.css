@@ -4,8 +4,7 @@
 }
 
 .product-card__shell {
-  height: 440px;
-  width: 260px;
+
   padding: var(--padding-lg);
   border-radius: var(--border-radius-sm);
   display: grid;
@@ -48,8 +47,8 @@
 }
 
 .product-card__button {
-
-  width: 300px}
+  width: fit-content;
+}
 
 .product-card__outOfStock {
   font-family: var(--font-primary);

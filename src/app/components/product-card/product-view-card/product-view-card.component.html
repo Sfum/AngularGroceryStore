@@ -1,0 +1,43 @@
+<mat-card class="container mat-elevation-z20" *ngIf="product">
+  <div class="view__left-column">
+    <img class="view__image" [src]="product.product_image" />
+  </div>
+
+  <div class="view__right-column">
+    <h2 class="view__product--name">{{ product.product_name }}</h2>
+    <h3 class="view__product--description">{{ product.long_description }}</h3>
+
+    <div class="view__product">
+      <div class="view__product-label-h3">
+        Country Of Origin: {{ product.made_in_country }}
+      </div>
+      <div class="view__product-label-h4">
+        Climate Friendly: {{ product.climate_friendly }}
+      </div>
+      <div class="view__product-label-h5">
+        Price per 100g: {{ product.price_per_weight }}
+      </div>
+      <div class="view__product-label-h5">
+        Number Of Items: {{ product.number_of_items }}
+      </div>
+      <div class="view__product-label-h5">
+        Diet Type: {{ product.diet_type }}
+      </div>
+      <div class="view__product-label-h5">Flavour: {{ product.flavour }}</div>
+
+      <div>
+        <div class="view__button-group">
+          <button
+            class="view__button"
+            mat-raised-button
+            (click)="addToCart(product)"
+            [style.color]="product.in_cart ? 'red' : 'green'"
+          >
+            <mat-icon>add_shopping_cart</mat-icon>
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

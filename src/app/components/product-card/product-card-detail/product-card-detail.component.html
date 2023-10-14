@@ -35,7 +35,7 @@
             [style.color]="product.quantity == 0 ? 'red' : 'green'"
           >fiber_manual_record
           </mat-icon>
-          <mat-icon class="product-card__icon">check_circle</mat-icon>
+          <mat-icon class="product-card__icon" [routerLink]="['/product', product._id]">check_circle</mat-icon>
           <mat-icon class="product-card__icon">question_answer</mat-icon>
           <mat-icon class="product-card__icon">phone</mat-icon>
         </div>
