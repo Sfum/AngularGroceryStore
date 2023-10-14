@@ -19,7 +19,7 @@ import {Router} from "@angular/router";
 })
 export class ProductService {
 
-  MOCK_URL = 'assets/json/product-data.json';
+  MOCK_URL = 'http://localhost:8000';
 
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 

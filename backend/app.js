@@ -4,15 +4,17 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 //////
+const atlasUri = "mongodb+srv://sektor1:UlqvAbWBUHUEN1JZ@sektor2.hvhskib.mongodb.net/?retryWrites=true&w=majority";
 mongoose
-  .connect("mongodb://127.0.0.1:27017/grocerysh")
-  .then((x) => {
-    console.log(
-      `Connected to Mongo! Database name: "${x.connections[0].name}"`
-    );
+  .connect(atlasUri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB Atlas");
   })
   .catch((err) => {
-    console.error("Error connecting to mongo", err.reason);
+    console.error("Error connecting to MongoDB Atlas", err);
   });
 
 const productRoute = require("./routes/product.routes");
