@@ -134,6 +134,11 @@ export class ProductService {
   onCompareClick() {
     this.router.navigate(['./compare']); // navigate to compare page
   }
+  AddProduct(data: Product): Observable<any> {
+    let API_URL = `${this.MOCK_URL}/add-product`;
+    return this.httpClient.post(API_URL, data);
+  }
+
   GetProduct(id: any): Observable<any> {
     let API_URL = `${this.MOCK_URL}/product/${id}`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders }).pipe(
@@ -142,4 +147,9 @@ export class ProductService {
       })
     );
   }
+  updateProduct(id: any, data: any): Observable<any> {
+    let API_URL = `${this.MOCK_URL}/update-product/${id}`;
+    return this.httpClient.put(API_URL, data, { headers: this.httpHeaders });
+  }
+
 }

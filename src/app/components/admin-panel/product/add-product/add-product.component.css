@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 30px 10px;
+  min-height: 1000px;
+}
+.form__label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xlg);
+  margin: var(--margin-xlg);
+  padding: var(--margin-xlg);
+  text-align: center;
+}
+.form-control {
+  width: 800px;
+  margin: var(--margin-xsm);
+}

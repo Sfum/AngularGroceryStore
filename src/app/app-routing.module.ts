@@ -9,6 +9,9 @@ import {CategoryComponent} from "./components/category/category.component";
 import {ShoppingCartComponent} from "./components/shopping-cart/shopping-cart.component";
 import {CompareComponent} from "./components/compare/compare.component";
 import {ProductViewCardComponent} from "./components/product-card/product-view-card/product-view-card.component";
+import {EditProductComponent} from "./components/admin-panel/product/edit-product/edit-product.component";
+import {AddProductComponent} from "./components/admin-panel/product/add-product/add-product.component";
+import {ProductsListComponent} from "./components/admin-panel/product/products-list/products-list.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent},
@@ -17,6 +20,9 @@ const routes: Routes = [
     loadChildren: () => import('./components/product-card/product-card.module').then(x => x.ProductCardModule)
   },
   {path: 'products/:id', component: ProductViewCardComponent},
+  {path: 'add-product', component: AddProductComponent},
+  {path: 'edit-product/:id', component: EditProductComponent},
+  {path: 'products-list', component: ProductsListComponent},
   {path: 'shopping-cart', component: ShoppingCartComponent},
   {path: 'reviews', component: ReviewComponent},
   {path: 'wishlist', component: WishlistComponent},

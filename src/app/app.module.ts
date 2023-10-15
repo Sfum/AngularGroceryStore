@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {ProductCardComponent} from './components/product-card/product-card.component';
 import {ProductCardDetailComponent} from './components/product-card/product-card-detail/product-card-detail.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {HttpClientModule} from "@angular/common/http";
@@ -37,7 +37,10 @@ import {CompareDetailComponent} from './components/compare/compare-detail/compar
 import { SnackbarComponent } from './shared/snackbar/snackbar.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ProductComponent } from './components/admin-panel/product/product.component';
+import { AddProductComponent } from './components/admin-panel/product/add-product/add-product.component';
+import { EditProductComponent } from './components/admin-panel/product/edit-product/edit-product.component';
+import { ProductsListComponent } from './components/admin-panel/product/products-list/products-list.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -59,7 +62,9 @@ import { ProductComponent } from './components/admin-panel/product/product.compo
     CompareComponent,
     CompareDetailComponent,
     SnackbarComponent,
-    ProductComponent
+    AddProductComponent,
+    EditProductComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,9 @@ import { ProductComponent } from './components/admin-panel/product/product.compo
     MatBadgeModule,
     AppRoutingModule,
     ProductCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

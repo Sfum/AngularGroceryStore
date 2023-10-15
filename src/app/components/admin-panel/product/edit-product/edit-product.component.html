@@ -1,0 +1,278 @@
+<div class="form__label">Edit Product</div>
+<form
+  class="container"
+  *ngIf="productEdit$ | async as asyncFilterPipe"
+  [formGroup]="updateForm"
+  (ngSubmit)="onUpdate()"
+>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      type="text"
+      placeholder="Id"
+      formControlName="_id"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      type="text"
+      placeholder="Product Name"
+      formControlName="product_name"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <mat-label> Select Supplier </mat-label>
+    <mat-select
+      [(value)]="selectedSupplierId"
+      (change)="optionSupplierSelected($any($event.target).value)"
+      formControlName="supplierId"
+    >
+      <mat-option
+        *ngFor="let element of asyncFilterPipe.suppliers"
+        [value]="element.id"
+      >
+        {{ element.supplier_name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <mat-label> Select Category </mat-label>
+    <mat-select
+      [(value)]="selectedCategoryId"
+      (change)="optionCategorySelected($any($event.target).value)"
+      formControlName="categoryId"
+    >
+      <mat-option
+        *ngFor="let element of asyncFilterPipe.categories"
+        [value]="element.id"
+      >
+        {{ element.category_name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Review"
+      formControlName="reviewId"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Catalogue Number"
+      formControlName="catalogue_number"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Short Description"
+      formControlName="short_description"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Long Description"
+      formControlName="long_description"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Product Image"
+      formControlName="product_image"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Price"
+      formControlName="price"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Availability"
+      formControlName="availability"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Quantity"
+      formControlName="quantity"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="In Wishlist"
+      formControlName="in_wishlist"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="In Compare"
+      formControlName="in_compare"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="In Cart"
+      formControlName="in_cart"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Country Of Manufacture"
+      formControlName="made_in_country"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="On Sale"
+      formControlName="on_sale"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Climate Friendly"
+      formControlName="climate_friendly"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Delivery Slot"
+      formControlName="delivery_slot"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Price per 100g"
+      formControlName="price_per_weight"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Diet Type"
+      formControlName="diet_type"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Size"
+      formControlName="size"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Number Of Items"
+      formControlName="number_of_items"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Format"
+      formControlName="format"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Type"
+      formControlName="type"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      placeholder="Flavour"
+      formControlName="flavour"
+      required
+    />
+  </mat-form-field>
+  <button mat-raised-button class="form-control" type="submit">Update</button>
+</form>
