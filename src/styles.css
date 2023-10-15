@@ -39,7 +39,7 @@ body {
   text-align: left;
   text-transform: capitalize;
   color: var(--color-3);
-  opacity: 60%;
+  opacity: 70%;
 }
 
 .font-label {
@@ -113,11 +113,11 @@ body {
 
   /*Colors*/
 
-  --color-5: #7FFF00;
-  --color-4: #32CD32;
-  --color-3: #3b4b21;
-  --color-2: #4d602a;
-  --color-1: #556B2F;
+  --color-5: grey;
+  --color-4: grey;
+  --color-3: grey;
+  --color-2: grey;
+  --color-1: grey;
 
   /*Font family*/
 

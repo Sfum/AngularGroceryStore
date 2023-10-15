@@ -17,6 +17,7 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   color: #004d40;
+  overflow: auto
 }
 .nav {
   grid-area: nav;

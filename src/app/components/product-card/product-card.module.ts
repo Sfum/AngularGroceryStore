@@ -12,16 +12,18 @@ import { SidebarChartDetailComponent } from './sidebar/sidebar-chart/sidebar-cha
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { ProductFilterDetailComponent } from './product-filter/product-filter-detail/product-filter-detail.component';
 import { ProductViewCardComponent } from './product-view-card/product-view-card.component';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    RouterLink,
-    MatCardModule,
-  ],
+    imports: [
+        CommonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        RouterLink,
+        MatCardModule,
+        MatIconModule,
+    ],
     exports: [
         SidebarChartComponent,
         ProductFilterComponent

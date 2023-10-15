@@ -1,10 +1,31 @@
 <mat-card class="sidebar__container" *ngIf="product">
+
   <img class="sidebar__card--image"
        [src]="product.product_image"
        height="130" width="130"
        alt="Product Image"/>
+
   <div class="sidebar__text-wrapper">
     <span class="sidebar__label--title font-primary">{{ product.product_name | slice:0:13 }}...</span>
-    <span class="sidebar__label--text font-secondary-small">${{ product.price }}</span>
+    <span class="sidebar__label--text font-secondary">{{ product.supplierId }}</span>
   </div>
+
+  <button
+    mat-raised-button
+    class="sidebar__button button__primary"
+    (click)="addToCart(product)"
+    *ngIf="product.quantity > 0; else outOfStock">
+    <mat-icon
+      class="product-card__icon--cart"
+      [style.color]="product.quantity == 0 ? 'red' : 'green'"
+    >shopping_cart
+    </mat-icon
+    >
+    {{ product.price }}
+  </button>
+
+  <ng-template #outOfStock>
+    <div class="sidebar_outStock">Out of stock!</div>
+  </ng-template>
+
 </mat-card>

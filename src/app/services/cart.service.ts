@@ -20,7 +20,7 @@ export class CartService {
       product.in_cart = !product.in_cart;
       this.snackbarService.showSnackbar(`\`${product.product_name}\` by \`${product.supplierId}\` added to Cart`);
     } else {
-      alert('Product Already In Cart');
+      this.snackbarService.showSnackbar('Product Already In Cart');
     }
   }
   addProductToCart(addedProduct: Product) {

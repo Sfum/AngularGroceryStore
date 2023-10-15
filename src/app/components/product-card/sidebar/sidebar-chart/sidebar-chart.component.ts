@@ -11,7 +11,7 @@ import {ProductService} from "../../../../services/product.service";
 })
 export class SidebarChartComponent implements OnInit {
 
-  products$: Observable<Product[]> = this.productService.products$
+  products$: Observable<Product[]> = this.productService.productsFiltered$
   products!: Product[];
 
   @Input()

@@ -4,26 +4,26 @@
   </div>
 
   <div class="view__right-column">
-    <h2 class="view__product--name">{{ product.product_name }}</h2>
-    <h3 class="view__product--description">{{ product.long_description }}</h3>
+    <h2 class="view__product--name font-primary">{{ product.product_name }}</h2>
+    <h3 class="view__product--description font-secondary">{{ product.long_description }}</h3>
 
     <div class="view__product">
-      <div class="view__product-label-h3">
+      <div class="view__product-label-h3 font-secondary">
         Country Of Origin: {{ product.made_in_country }}
       </div>
-      <div class="view__product-label-h4">
+      <div class="view__product-label-h4 font-secondary">
         Climate Friendly: {{ product.climate_friendly }}
       </div>
-      <div class="view__product-label-h5">
+      <div class="view__product-label-h5 font-secondary">
         Price per 100g: {{ product.price_per_weight }}
       </div>
-      <div class="view__product-label-h5">
+      <div class="view__product-label-h5 font-secondary-small">
         Number Of Items: {{ product.number_of_items }}
       </div>
-      <div class="view__product-label-h5">
+      <div class="view__product-label-h5 font-secondary-small">
         Diet Type: {{ product.diet_type }}
       </div>
-      <div class="view__product-label-h5">Flavour: {{ product.flavour }}</div>
+      <div class="view__product-label-h5 font-secondary-small">Flavour: {{ product.flavour }}</div>
 
       <div>
         <div class="view__button-group">
@@ -33,7 +33,11 @@
             (click)="addToCart(product)"
             [style.color]="product.in_cart ? 'red' : 'green'"
           >
-            <mat-icon>add_shopping_cart</mat-icon>
+            <mat-icon
+              class="product-card__icon--cart"
+              [style.color]="product.quantity == 0 ? 'red' : 'green'"
+            >shopping_cart
+            </mat-icon>
             Add To Cart
           </button>
         </div>

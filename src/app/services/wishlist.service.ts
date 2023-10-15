@@ -17,7 +17,7 @@ export class WishlistService {
       this.snackbarService.showSnackbar(`\`${product.product_name}\` by \`${product.supplierId}\` added to Wishlist`);
       product.in_wishlist = !product.in_wishlist;
     } else {
-      alert('Item is Already In Wishlist');
+      this.snackbarService.showSnackbar('Item is Already In Wishlist');
     }
   }
   getProduct() {

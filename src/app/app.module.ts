@@ -37,6 +37,7 @@ import {CompareDetailComponent} from './components/compare/compare-detail/compar
 import { SnackbarComponent } from './shared/snackbar/snackbar.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProductComponent } from './components/admin-panel/product/product.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReviewDetailComponent,
     CompareComponent,
     CompareDetailComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

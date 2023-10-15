@@ -18,7 +18,7 @@ export class CompareService {
       product.in_compare = !product.in_compare;
 
     } else {
-      alert('Item Already In Compare');
+      this.snackbarService.showSnackbar('Item Already In Compare');
     }
   }
   getProduct() {
