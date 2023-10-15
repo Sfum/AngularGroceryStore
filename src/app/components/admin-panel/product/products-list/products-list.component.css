@@ -1,0 +1,24 @@
+.container {
+  align-content: center;
+  margin: 10px 30px 10px;
+  min-height: 1000px;
+}
+.container__menu {
+  margin: 30px;
+}
+.admin__label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xlg);
+  text-align: center;
+}
+.button__group--container {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--margin-md);
+}
+.admin__button {
+  margin: var(--padding-md);
+  width: 100%;
+  font-family: var(--font-primary);
+  text-align: center;
+}
