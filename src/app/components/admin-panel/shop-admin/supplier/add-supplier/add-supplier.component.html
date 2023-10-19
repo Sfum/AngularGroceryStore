@@ -1,0 +1,46 @@
+<div class="form__label">Add Supplier</div>
+<form class="container" [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-control">
+    <label>System ID</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="_id"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <label>Supplier ID</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="id"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <label>Supplier Name</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="supplier_name"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <label>Description</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="supplier_description"
+      required
+    />
+  </mat-form-field>
+  <button mat-raised-button class="form-control" type="submit">
+    Add Supplier
+  </button>
+</form>

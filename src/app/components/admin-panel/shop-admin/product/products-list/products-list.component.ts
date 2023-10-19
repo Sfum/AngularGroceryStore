@@ -12,8 +12,8 @@ import { MatSort } from '@angular/material/sort';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
-import {ProductService} from "../../../../services/product.service";
-import {Product} from "../../../../models/product";
+import {ProductService} from "../../../../../services/product.service";
+import {Product} from "../../../../../models/product";
 
 @Component({
   selector: 'app-products-list',

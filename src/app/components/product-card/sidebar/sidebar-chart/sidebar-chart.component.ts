@@ -11,7 +11,7 @@ import {ProductService} from "../../../../services/product.service";
 })
 export class SidebarChartComponent implements OnInit {
 
-  products$: Observable<Product[]> = this.productService.productsFiltered$
+  products$: Observable<Product[]> = this.productService.products$
   products!: Product[];
 
   @Input()
@@ -21,11 +21,11 @@ export class SidebarChartComponent implements OnInit {
               private productService: ProductService) {
   }
   ngOnInit() {
-    this.loadProducts();
+    this.loadProducts()
   }
 
   loadProducts() {
-    return this.httpClient.get<Product[]>('assets/json/product-data.json').pipe(
+    return this.httpClient.get<Product[]>('http://localhost:8000').pipe(
       map((products) => this.sortProductsBySales(products))
     );
   }

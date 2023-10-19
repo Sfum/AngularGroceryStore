@@ -1,8 +1,8 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../../services/product.service';
-import {SnackbarService} from "../../../../services/snackbar.service";
+import { ProductService } from '../../../../../services/product.service';
+import {SnackbarService} from "../../../../../services/snackbar.service";
 
 @Component({
   selector: 'app-edit-product',

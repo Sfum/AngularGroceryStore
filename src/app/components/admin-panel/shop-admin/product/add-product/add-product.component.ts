@@ -1,7 +1,7 @@
 import { Component, NgZone } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProductService } from '../../../../services/product.service';
+import { ProductService } from '../../../../../services/product.service';
 
 
 @Component({

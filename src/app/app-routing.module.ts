@@ -9,9 +9,9 @@ import {CategoryComponent} from "./components/category/category.component";
 import {ShoppingCartComponent} from "./components/shopping-cart/shopping-cart.component";
 import {CompareComponent} from "./components/compare/compare.component";
 import {ProductViewCardComponent} from "./components/product-card/product-view-card/product-view-card.component";
-import {EditProductComponent} from "./components/admin-panel/product/edit-product/edit-product.component";
-import {AddProductComponent} from "./components/admin-panel/product/add-product/add-product.component";
-import {ProductsListComponent} from "./components/admin-panel/product/products-list/products-list.component";
+import {EditProductComponent} from "./components/admin-panel/shop-admin/product/edit-product/edit-product.component";
+import {AddProductComponent} from "./components/admin-panel/shop-admin/product/add-product/add-product.component";
+import {ProductsListComponent} from "./components/admin-panel/shop-admin/product/products-list/products-list.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent},

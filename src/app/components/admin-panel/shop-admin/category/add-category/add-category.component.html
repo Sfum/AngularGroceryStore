@@ -1,0 +1,36 @@
+<div class="form__label">Add Category</div>
+<form class="container" [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-control">
+    <label>System ID</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="_id"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <label>Category ID</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="id"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <label>Category Name</label>
+    <input
+      matInput
+      class="form-control"
+      type="text"
+      formControlName="category_name"
+      required
+    />
+  </mat-form-field>
+  <button class="form-control" mat-raised-button type="submit">
+    Add Category
+  </button>
+</form>

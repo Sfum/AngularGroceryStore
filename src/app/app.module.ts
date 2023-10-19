@@ -37,13 +37,14 @@ import {CompareDetailComponent} from './components/compare/compare-detail/compar
 import { SnackbarComponent } from './shared/snackbar/snackbar.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AddProductComponent } from './components/admin-panel/product/add-product/add-product.component';
-import { EditProductComponent } from './components/admin-panel/product/edit-product/edit-product.component';
-import { ProductsListComponent } from './components/admin-panel/product/products-list/products-list.component';
+import { AddProductComponent } from './components/admin-panel/shop-admin/product/add-product/add-product.component';
+import { EditProductComponent } from './components/admin-panel/shop-admin/product/edit-product/edit-product.component';
+import { ProductsListComponent } from './components/admin-panel/shop-admin/product/products-list/products-list.component';
 import {MatSelectModule} from "@angular/material/select";
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import {MatSortModule} from "@angular/material/sort";
     SnackbarComponent,
     AddProductComponent,
     EditProductComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -93,6 +95,9 @@ import {MatSortModule} from "@angular/material/sort";
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [
+    ProductsListComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {

@@ -6,10 +6,6 @@ let Supplier = new Schema(
     id: {
       type: Number,
     },
-    _id: {
-      type: String,
-    },
-
     supplier_name: {
       type: String,
     },
