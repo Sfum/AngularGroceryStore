@@ -1,10 +1,10 @@
 <mat-card class="product-card__container mat-elevation-z20">
   <article *ngIf="product">
     <div class="product-card__shell">
-      <img class="product-card__image" [src]="product.product_image" width="260"
+      <img class="product-card__image" [src]="product.product_image" width="200"
            alt="Product Image"/>
       <div class="product-card-bottom__wrapper">
-        <span class="font-primary">{{ product.product_name | slice:0:25 }}</span>
+        <span class="font-primary">{{ product.product_name | slice:0:13 }}...</span>
         <hr class="product-card__line">
         <span class="font-secondary">{{ product.supplierId }}</span>
         <hr class="product-card__line">
@@ -12,7 +12,7 @@
 
         <div class="product-card__icon-field">
           <mat-icon
-            class="product-card__icon">
+            class="product-card__icon" [routerLink]="['/product', product._id]">
             open_in_new
           </mat-icon>
           <mat-icon
@@ -35,9 +35,6 @@
             [style.color]="product.quantity == 0 ? 'red' : 'green'"
           >fiber_manual_record
           </mat-icon>
-          <mat-icon class="product-card__icon" [routerLink]="['/product', product._id]">check_circle</mat-icon>
-          <mat-icon class="product-card__icon">question_answer</mat-icon>
-          <mat-icon class="product-card__icon">phone</mat-icon>
         </div>
 
         <button

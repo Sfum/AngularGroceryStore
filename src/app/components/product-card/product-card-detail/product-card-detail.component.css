@@ -4,7 +4,6 @@
 }
 
 .product-card__shell {
-
   padding: var(--padding-lg);
   border-radius: var(--border-radius-sm);
   display: grid;
@@ -13,7 +12,7 @@
 
 .product-card__image {
   background-size: cover;
-  height: 220px;
+  height: 180px;
   border-radius: var(--border-radius-sm);
   grid-row: 1/2;
 }

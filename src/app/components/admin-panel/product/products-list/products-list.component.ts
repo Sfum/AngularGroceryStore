@@ -1,7 +1,6 @@
 import {
   AfterViewInit,
   Component,
-  Input,
   NgZone,
   ViewChild,
 } from '@angular/core';
@@ -44,7 +43,6 @@ export class ProductsListComponent implements AfterViewInit {
     private productService: ProductService,
     private router: Router,
     private ngZone: NgZone,
-    private activatedRoute: ActivatedRoute,
   ) {
     this.dataSource = new MatTableDataSource<Product>();
   }
