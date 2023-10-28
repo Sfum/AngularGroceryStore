@@ -8,9 +8,7 @@ import {Product} from "../../../models/product";
 })
 export class ProductCardDetailComponent {
 
-  @Input()
-  product: Product | undefined;
-
+  @Input() product: Product | undefined;
   @Output() addToCartEvent: EventEmitter<any> = new EventEmitter<any>();
   @Output() addToWishlistEvent: EventEmitter<any> = new EventEmitter<any>();
   @Output() addToCompareEvent: EventEmitter<any> = new EventEmitter<any>();
@@ -26,4 +24,6 @@ export class ProductCardDetailComponent {
   addToCompare(product: any) {
     this.addToCompareEvent.emit(product);
   }
+
 }
+

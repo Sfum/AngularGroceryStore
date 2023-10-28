@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient} from "@angular/common/http";
 import { Product } from "../../models/product";
 import { BehaviorSubject, catchError, combineLatest, EMPTY, map, shareReplay, tap } from "rxjs";
 import { CategoryService } from "../../services/category.service";

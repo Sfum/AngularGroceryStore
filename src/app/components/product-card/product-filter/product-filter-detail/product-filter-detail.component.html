@@ -1,16 +1,25 @@
 <div class="sidebar__container" *ngIf="filterField$ | async as supplier">
-    <mat-form-field appearance="fill">
-        <mat-label class="sidebar__filter-label">Filter by supplier</mat-label>
-        <mat-select
-                class="sidebar__form--control"
-                (selectionChange)="optionSupplierSelected($any($event.value))">
-            <mat-option value="0">- All categories -</mat-option>
-            <mat-option
-                    *ngFor="let supplier of supplier.suppliers"
-                    [value]="supplier.id"
-            >
-                {{ supplier.supplier_name }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label class="sidebar__filter-label">Filter by supplier</mat-label>
+    <mat-select
+      class="sidebar__form--control"
+      (selectionChange)="optionSupplierSelected($any($event.value))">
+      <mat-option value="0">- All categories -</mat-option>
+      <mat-option
+        *ngFor="let supplier of supplier.suppliers"
+        [value]="supplier.id"
+      >
+        {{ supplier.supplier_name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
+
+<form #sliderForm="ngForm">
+  <mat-slider (input)="onFilterChange()" [(ngModel)]="sliderFilter">
+    <input value="1" matSliderStartThumb>
+    <input value="200" matSliderEndThumb>
+  </mat-slider>
+</form>
+
+<div class="font-primary">Ade:{{sliderFilter}}</div>

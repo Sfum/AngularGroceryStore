@@ -1,11 +1,11 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
 import {ProductCardComponent} from './components/product-card/product-card.component';
 import {ProductCardDetailComponent} from './components/product-card/product-card-detail/product-card-detail.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSliderModule} from '@angular/material/slider';
 
 import {HttpClientModule} from "@angular/common/http";
 
@@ -44,7 +44,6 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
-import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 
 
 @NgModule({
@@ -69,7 +68,6 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
     AddProductComponent,
     EditProductComponent,
     ProductsListComponent,
-    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +89,8 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

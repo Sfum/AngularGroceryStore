@@ -18,10 +18,9 @@ export class ProductCardComponent {
               private wishlistService: WishlistService,
               private compareService: CompareService) {
   }
+
   products!: Product[];
-
-
-  products$ = this.productService.productsFiltered$
+  products$ = this.productService.productsArrayFiltered$
 
   onAddToCart(product: any) {
     this.cartService.addToCart(product)
@@ -30,7 +29,6 @@ export class ProductCardComponent {
     this.wishlistService.addToWishlist(product)
 
   }
-
   onAddToCompare(product: any) {
     this.compareService.addToCompare(product)
   }

@@ -22,6 +22,7 @@ export class ProductService {
   MOCK_URL = 'http://localhost:8000';
 
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
+  private minPrice!: number;
 
   constructor(
     private httpClient: HttpClient,
@@ -37,6 +38,10 @@ export class ProductService {
 
   categories$ = this.categoryService.categories$
   suppliers$ = this.supplierService.suppliers$
+
+  private products: Product[] = []; // Initialize with your product data
+  private productsFilteredSubject = new BehaviorSubject<Product[]>(this.products);
+  productsFiltered$ = this.productsFilteredSubject.asObservable();
 
   public supplierSelectedSubject = new BehaviorSubject<number>(0);
   supplierSelectedAction$ = this.supplierSelectedSubject.asObservable();
@@ -84,7 +89,7 @@ export class ProductService {
     this.categorySelectedSubject.next(+selectedCategoryId);
   }
 
-  productsFiltered$ = combineLatest([
+  productsArrayFiltered$ = combineLatest([
     this.categoryActionStream$,
     this.suppliers$,
     this.categories$,
@@ -106,7 +111,7 @@ export class ProductService {
     shareReplay(1)
   );
   filteredProducts$ = combineLatest([
-    this.productsFiltered$,
+    this.productsArrayFiltered$,
     this.suppliers$,
     this.categories$,
   ]).pipe(
@@ -154,5 +159,13 @@ export class ProductService {
   deleteProduct(id: any): Observable<any> {
     let API_URL = `${this.MOCK_URL}/delete-product/${id}`;
     return this.httpClient.delete(API_URL, { headers: this.httpHeaders });
+  }
+
+  filterProductsByPrice(minPrice: number, maxPrice: number) {
+    const filteredProducts = this.products.filter((product) => {
+      return product.price >= minPrice && product.price <= maxPrice;
+    });
+    this.productsFilteredSubject.next(filteredProducts);
+    console.log(this.minPrice)
   }
 }

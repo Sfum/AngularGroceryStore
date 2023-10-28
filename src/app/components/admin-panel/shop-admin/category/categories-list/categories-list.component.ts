@@ -2,7 +2,6 @@ import {
   AfterViewInit,
   Component,
   NgZone,
-  OnInit,
   ViewChild,
 } from '@angular/core';
 import { CategoryService } from '../../../../../services/category.service';

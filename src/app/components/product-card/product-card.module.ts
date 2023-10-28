@@ -13,22 +13,29 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
 import { ProductFilterDetailComponent } from './product-filter/product-filter-detail/product-filter-detail.component';
 import { ProductViewCardComponent } from './product-view-card/product-view-card.component';
 import {MatIconModule} from "@angular/material/icon";
+import {MatSliderModule} from "@angular/material/slider";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
-    imports: [
-        CommonModule,
-        MatInputModule,
-        MatSelectModule,
-        MatButtonModule,
-        RouterLink,
-        MatCardModule,
-        MatIconModule,
-    ],
-    exports: [
-        SidebarChartComponent,
-        ProductFilterComponent
+  imports: [
+    CommonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    RouterLink,
+    MatCardModule,
+    MatIconModule,
+    MatSliderModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    SidebarChartComponent,
+    ProductFilterComponent,
+    ProductFilterDetailComponent
 
-    ],
+  ],
   declarations: [
 
 
