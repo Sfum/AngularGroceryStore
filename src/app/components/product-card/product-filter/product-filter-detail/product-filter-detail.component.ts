@@ -1,7 +1,8 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ProductService} from "../../../../services/product.service";
 import {Router} from "@angular/router";
-import {min} from "rxjs";
+import {Observable} from "rxjs";
+import {Supplier} from "../../../../models/supplier";
 
 @Component({
   selector: 'app-product-filter-detail',
@@ -13,13 +14,11 @@ export class ProductFilterDetailComponent {
   minPrice: number = 1;
   maxPrice: number = 200;
 
-  filterField$ = this.productService.filteredProducts$
-
+  @Input() filterField$?: Observable<Supplier[]>
   @Output() supplierSelectedEvent: EventEmitter<any> = new EventEmitter<any>();
   @Output() filterChanged = new EventEmitter<{ minPrice: number; maxPrice: number }>();
 
-  constructor(private productService: ProductService,
-              public router: Router) {
+  constructor(public router: Router) {
   }
 
   optionSupplierSelected(selectedSupplierId: number) {
@@ -29,6 +28,4 @@ export class ProductFilterDetailComponent {
   onFilterChange() {
     this.filterChanged.emit({ minPrice: this.minPrice, maxPrice: this.maxPrice });
   }
-
-  protected readonly min = min;
 }

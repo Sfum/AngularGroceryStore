@@ -4,6 +4,7 @@
     <button mat-raised-button class="sidebar__button" (click)="sortProductsBySales(products)">Most Popular</button>
   </div>
   <app-sidebar-chart-detail *ngFor="let product of products$ | async | slice:0:15;
-                     index as i " [product]="product">
+                     index as i " [product]="product"
+                                  (onAddToCartEvent)="onAddToCart(product)">
   </app-sidebar-chart-detail>
 </div>

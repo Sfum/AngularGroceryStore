@@ -18,6 +18,7 @@ import { CategoriesListComponent } from './shop-admin/category/categories-list/c
 
 const routes: Routes = [
   { path: '', component: ShopAdminComponent },
+
   { path: 'add-product', component: AddProductComponent },
   { path: 'edit-product/:id', component: EditProductComponent },
   { path: 'products-list', component: ProductsListComponent },
