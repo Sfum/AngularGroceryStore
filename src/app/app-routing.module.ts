@@ -23,9 +23,7 @@ const routes: Routes = [
   {path: 'add-product', component: AddProductComponent},
   {path: 'edit-product/:id', component: EditProductComponent},
   {path: 'products-list', component: ProductsListComponent},
-  {path: 'add-product', component: AddProductComponent},
-  {path: 'edit-product/:id', component: EditProductComponent},
-  {path: 'products-list', component: ProductsListComponent},
+
   {path: 'shopping-cart', component: ShoppingCartComponent},
   {path: 'reviews', component: ReviewComponent},
   {path: 'wishlist', component: WishlistComponent},

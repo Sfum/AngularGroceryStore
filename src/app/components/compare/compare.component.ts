@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Product} from "../../models/product";
 import {ProductService} from "../../services/product.service";
 import {WishlistService} from "../../services/wishlist.service";
-import {Router} from "@angular/router";
 import {CartService} from "../../services/cart.service";
 import {CompareService} from "../../services/compare.service";
 
@@ -21,8 +20,7 @@ export class CompareComponent  implements OnInit {
     private compareService: CompareService,
     private productService: ProductService,
     private wishlistService: WishlistService,
-    private router: Router,
-    private cartService: CartService,
+    private cartService: CartService
   ) {
   }
 

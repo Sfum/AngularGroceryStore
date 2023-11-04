@@ -3,17 +3,19 @@
     <mat-label class="sidebar__filter-label">Filter by supplier</mat-label>
     <mat-select
       class="sidebar__form--control"
-      (selectionChange)="optionSupplierSelected($any($event.value))">
+      (selectionChange)="optionSupplierSelected($any($event.value))"
+    >
       <mat-option value="0">- All categories -</mat-option>
       <mat-option
-        *ngFor="let supplier of supplier.suppliers"
-        [value]="supplier.id"
+        *ngFor="let supplierItem of filterField$ | async as suppliers"
+        [value]="supplierItem.id"
       >
-        {{ supplier.supplier_name }}
+        {{ supplierItem.supplier_name }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 </div>
+
 
 <form #sliderForm="ngForm">
   <mat-slider (input)="onFilterChange()" [(ngModel)]="sliderFilter">

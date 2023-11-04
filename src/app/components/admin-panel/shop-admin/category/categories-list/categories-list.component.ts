@@ -36,7 +36,6 @@ export class CategoriesListComponent implements AfterViewInit {
     private categoryCrudService: CategoryService,
     private router: Router,
     private ngZone: NgZone,
-    private activatedRoute: ActivatedRoute,
     private supplierService: AdminProductService
   ) {
     this.dataSource = new MatTableDataSource<Category>();

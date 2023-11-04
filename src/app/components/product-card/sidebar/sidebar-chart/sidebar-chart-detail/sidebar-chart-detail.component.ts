@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "../../../../../models/product";
 import {CartService} from "../../../../../services/cart.service";
 import {Router} from "@angular/router";
@@ -9,15 +9,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./sidebar-chart-detail.component.css']
 })
 export class SidebarChartDetailComponent {
-  @Input()
-  product!: Product;
 
-  constructor(private cartService: CartService, private router: Router) {}
+  @Input() product!: Product;
+  @Output() onAddToCartEvent: EventEmitter<any> = new EventEmitter<any>()
 
   addToCart(product: Product) {
-    if (!this.cartService.productInCart(product)) {
-      product.quantity = 1;
-      this.cartService.addToCart(product);
-    }
+    this.onAddToCartEvent.emit(product)
   }
 }

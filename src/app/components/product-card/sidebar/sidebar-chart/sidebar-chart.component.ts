@@ -3,6 +3,7 @@ import {map, Observable} from "rxjs";
 import {Product} from "../../../../models/product";
 import {HttpClient} from "@angular/common/http";
 import {ProductService} from "../../../../services/product.service";
+import {CartService} from "../../../../services/cart.service";
 
 @Component({
   selector: 'app-sidebar-chart',
@@ -18,7 +19,8 @@ export class SidebarChartComponent implements OnInit {
   product: Product | undefined;
 
   constructor(public httpClient: HttpClient,
-              private productService: ProductService) {
+              private productService: ProductService,
+              private cartService: CartService) {
   }
   ngOnInit() {
     this.loadProducts()
@@ -47,4 +49,10 @@ export class SidebarChartComponent implements OnInit {
     return this.productService.optionSupplierSelected(selectedSupplierId);
   }
 
+  onAddToCart(product: Product) {
+    if (!this.cartService.productInCart(product)) {
+      product.quantity = 1;
+      this.cartService.addToCart(product);
+    }
+  }
 }
