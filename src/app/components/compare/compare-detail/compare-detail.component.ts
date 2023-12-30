@@ -15,7 +15,6 @@ export class CompareDetailComponent {
   @Output() addToWishlistEvent: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() removeFromCompareEvent: EventEmitter<Product> = new EventEmitter<Product>();
 
-
   addToCart(product: Product) {
     this.addToCartEvent.emit(product);
   }

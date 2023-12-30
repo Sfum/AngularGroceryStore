@@ -1,7 +1,8 @@
 .product-grid__container {
   display: grid;
   grid-template-columns: 0.5fr 3fr 0.5fr;
-  margin: var(--margin-lg)
+  margin: var(--margin-lg);
+  overflow: auto
 }
 
 .product-grid__sidebar--left {
@@ -68,6 +69,8 @@
 }
 
 @media only screen and (max-width: 900px) {
+
+
 
   .product-grid__sidebar--left {
     display: none;

@@ -1,7 +1,7 @@
 <div class="form__label">Edit Product</div>
 <form
   class="container"
-  *ngIf="productEdit$ | async as asyncFilterPipe"
+  *ngIf="(productEdit$ | async) as asyncFilterPipe"
   [formGroup]="updateForm"
   (ngSubmit)="onUpdate()"
 >

@@ -32,7 +32,6 @@ body {
 }
 .main {
   grid-area: main;
-  margin: 0 200px
 }
 .content {
   grid-area: content;
